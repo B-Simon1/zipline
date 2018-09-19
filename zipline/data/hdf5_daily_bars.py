@@ -15,8 +15,11 @@ Within each country, there are 3 subgroups:
      /close
      /volume
 
-Each field (OHLCV) is stored in a dataset as a 2d array, with a row per
-sid and a column per session.
+Each field (OHLCV) is stored in a dataset as a 2D array, with a row per
+sid and a column per session. This differs from the more standard
+orientation of dates x sids, because it allows each compressed block to
+contain contiguous values for the same sid, which allows for better
+compression.
 
 2) /index
      /sid
